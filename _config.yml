@@ -133,6 +133,8 @@ external_sources:
 # Collections
 # -----------------------------------------------------------------------------
 
+collections_dir: content
+
 collections:
   projects:
     output: true
