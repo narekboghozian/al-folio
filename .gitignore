@@ -9,3 +9,9 @@ _site
 Gemfile.lock
 vendor
 
+
+
+__pycache__
+
+**/*_nogit*
+**/*_nogit/**
