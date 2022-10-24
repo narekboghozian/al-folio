@@ -3,23 +3,22 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
-email: you@example.com
+first_name: Narek
+middle_name:
+last_name: Boghozian
+email: contact@narekb.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
+#  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+keywords: # jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/
+url: https://narekb.com # the base hostname & protocol for your site
+baseurl: '' # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -47,8 +46,8 @@ rss_icon: true
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
-footer_fixed: true
+navbar_fixed: false
+footer_fixed: false
 
 # Dimensions
 max_width: 800px
@@ -111,7 +110,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: al-folio # blog_name will be displayed in your blog page
-blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
+blog_nav_title:  # your blog must have a title for it to be displayed in the nav bar
 blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 
@@ -135,14 +134,22 @@ external_sources:
 # -----------------------------------------------------------------------------
 
 collections:
-  news:
-    defaults:
-      layout: post
-    output: true
-    permalink: /news/:path/
   projects:
     output: true
-    permalink: /projects/:path/
+    permalink: /content/projects/:path/
+  notes:
+    output: true
+    permalink: /content/notes/:path/
+
+
+    # news:
+    #   defaults:
+    #     layout: post
+    #   output: true
+    #   permalink: /news/:path/
+    # projects:
+    #   output: true
+    #   permalink: /projects/:path/
 
 news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
 news_limit: 5 # leave blank to include all the news in the `_news` folder
@@ -307,8 +314,8 @@ enable_navbar_social:       false  # enables displaying social links in the
                                    # navbar on the about page
 enable_project_categories:  true   # enables categorization of projects into
                                    # multiple categories
-enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
-enable_progressbar:         true   # enables a horizontal progress bar linked to the vertical scroll position
+enable_medium_zoom:         false   # enables image zoom feature (as on medium.com)
+enable_progressbar:         false   # enables a horizontal progress bar linked to the vertical scroll position
 
 # -----------------------------------------------------------------------------
 # Library versions
