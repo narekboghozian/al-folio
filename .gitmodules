@@ -1,0 +1,6 @@
+[submodule "_data"]
+	path = _data
+	url = git@github.com:narekboghozian/narekb.com-content.git
+[submodule "content"]
+	path = content
+	url = git@github.com:narekboghozian/narekb.com-content.git
