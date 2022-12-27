@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description:
 nav: true
 nav_order: 2
-display_categories: [University, Personal]
+display_categories: [Highlights, Software, Electronics, Hardware, Other]
 horizontal: false
 ---
 
@@ -17,6 +17,7 @@ horizontal: false
   <h2 class="category">{{ category }}</h2>
   {%- assign categorized_projects = site.projects | where: "category", category -%}
   {%- assign sorted_projects = categorized_projects | sort: "importance" %}
+  
   <!-- Generate cards for each project -->
   {% if page.horizontal -%}
   <div class="container">

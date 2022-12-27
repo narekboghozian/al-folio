@@ -6,11 +6,13 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Narek
 middle_name:
 last_name: Boghozian
-email: contact@narekb.com
+email:
+contact_page: true
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Engineer in the SF Bay Area.
+# A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+footer_text:
+#  <br>Powered by Jekyll and hosted on AWS. More info <a href="/projects/software/personal-website">here.</a><br>
 #  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: # jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
@@ -27,11 +29,11 @@ impressum_path:  # set to path to include impressum link in the footer, use the 
 # -----------------------------------------------------------------------------
 
 # code highlighter theme
-highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-themes
-highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_light: monokai   # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_dark: monokai    # https://github.com/jwarby/jekyll-pygments-themes
 
 # repo color theme
-repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_light: dark       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 
 # -----------------------------------------------------------------------------
@@ -40,7 +42,7 @@ repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-s
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -66,10 +68,10 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: # your GitHub user name
+github_username: narekboghozian # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
+linkedin_username: narek-boghozian-96135110a # your LinkedIn user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 orcid_id: # your ORCID ID
@@ -92,8 +94,7 @@ instagram_id: # your instagram id
 facebook_id: # your facebook id
 discord_id: # your discord id (18-digit unique numerical identifier)
 
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+contact_note:
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -109,9 +110,9 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
+blog_name: Blog # blog_name will be displayed in your blog page
 blog_nav_title:  # your blog must have a title for it to be displayed in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_description: 
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -125,9 +126,9 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other exteranl sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+# external_sources:
+#   - name: medium.com
+#     rss_url: https://medium.com/@al-folio/feed
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -180,6 +181,14 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - s3_uploader_nogit.sh
+  - node_modules
+  - misc_nogit
+  - Dockerfile
+  - LICENSE
+  - old_site
+  - .obsidian
+  - unused_assets_nogit
 keep_files:
   - CNAME
   - .nojekyll
@@ -199,6 +208,9 @@ plugins:
   - jekyll-target-blank
   - jekyll-twitter-plugin
   - jemoji
+  - jekyll-toc
+  - jekyll-inline-svg
+  - jekyll-numbered-headings
 
 # Sitemap settings
 defaults:
@@ -231,7 +243,7 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['formatting', 'images', 'links', 'math', 'code'] # this tags will be dispalyed on the front page of your blog
+display_tags: ['fitness', 'food'] # this tags will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -287,6 +299,7 @@ imagemagick:
     - ".jpeg"
     - ".png"
     - ".tiff"
+    - ".gif"
   output_formats:
     webp: "-resize 800x"
 
@@ -297,6 +310,16 @@ imagemagick:
 jekyll-diagrams:
     # configuration, see https://github.com/zhustec/jekyll-diagrams.
     # feel free to comment out this section if not using jekyll diagrams.
+
+
+# -----------------------------------------------------------------------------
+# Jekyll SVG
+# -----------------------------------------------------------------------------
+
+
+svg:
+  optimize: true
+
 
 
 # -----------------------------------------------------------------------------
@@ -311,12 +334,12 @@ enable_masonry:             true   # enables automatic project cards arangement
 enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            false  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
-enable_darkmode:            true   # enables switching between light/dark modes
+enable_darkmode:            false   # enables switching between light/dark modes
 enable_navbar_social:       false  # enables displaying social links in the
                                    # navbar on the about page
 enable_project_categories:  true   # enables categorization of projects into
                                    # multiple categories
-enable_medium_zoom:         false   # enables image zoom feature (as on medium.com)
+enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
 enable_progressbar:         false   # enables a horizontal progress bar linked to the vertical scroll position
 
 # -----------------------------------------------------------------------------

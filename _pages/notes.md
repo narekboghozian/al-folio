@@ -2,10 +2,10 @@
 layout: page
 title: Notes
 permalink: /notes/
-description: A growing collection of your cool notes.
+description: Technical notes I've taken and find useful.
 nav: true
 nav_order: 3
-display_categories: [Tutorials, Cheatsheets]
+display_categories: [Tutorials, Cheatsheets, Tools]
 horizontal: false
 ---
 
@@ -15,20 +15,20 @@ horizontal: false
   <!-- Display categorized projects -->
   {%- for category in page.display_categories %}
   <h2 class="category">{{ category }}</h2>
-  {%- assign categorized_projects = site.projects | where: "category", category -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
+  {%- assign categorized_notes = site.notes | where: "category", category -%}
+  {%- assign sorted_notes = categorized_notes | sort: "importance" %}
   <!-- Generate cards for each project -->
   {% if page.horizontal -%}
   <div class="container">
     <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
+    {%- for project in sorted_notes -%}
       {% include projects_horizontal.html %}
     {%- endfor %}
     </div>
   </div>
   {%- else -%}
   <div class="grid">
-    {%- for project in sorted_projects -%}
+    {%- for project in sorted_notes -%}
       {% include projects.html %}
     {%- endfor %}
   </div>
@@ -37,19 +37,19 @@ horizontal: false
 
 {%- else -%}
 <!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
+  {%- assign sorted_notes = site.notes | sort: "importance" -%}
   <!-- Generate cards for each project -->
   {% if page.horizontal -%}
   <div class="container">
     <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
+    {%- for project in sorted_notes -%}
       {% include projects_horizontal.html %}
     {%- endfor %}
     </div>
   </div>
   {%- else -%}
   <div class="grid">
-    {%- for project in sorted_projects -%}
+    {%- for project in sorted_notes -%}
       {% include projects.html %}
     {%- endfor %}
   </div>

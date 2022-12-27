@@ -1,0 +1,33 @@
+
+<script  type="text/javascript">
+
+	function build_toc() {
+
+
+
+		// const oldmdtoc = $("#markdown-toc");
+		// console.log(oldmdtoc);
+		// const newmdtoc = $("#new-markdown-toc");
+		// console.log(newmdtoc);
+		// newmdtoc.html(oldmdtoc.html());
+		// oldmdtoc.remove()
+		// newmdtoc.attr('id', 'markdown-toc');
+
+
+		const oldmdtoc = document.getElementById("markdown-toc");
+		const newmdtoc = document.getElementById("new-markdown-toc");
+
+		newmdtoc.innerHTML = oldmdtoc.innerHTML;
+		oldmdtoc.innerHTML = '';
+		newmdtoc.id = 'markdown-toc';
+
+	}
+
+	function reset_toc() {
+		const newmdtoc = $("#new-markdown-toc");
+	}
+
+	// window.onload = function () {build_toc();};
+
+	build_toc();
+</script>

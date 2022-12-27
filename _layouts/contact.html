@@ -1,0 +1,161 @@
+---
+layout: default
+---
+
+<!-- contact.html -->
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">Contact</h1>
+        </header>
+
+        <article>
+          <style>
+            .form{
+              text-align: center;
+              width: 100%;
+              padding: 3rem 1rem;
+              border-radius: 2rem;
+              margin-top: 3rem;
+              position: relative;
+              overflow: hidden;
+            }
+
+            .textbox {
+              display: block;
+              margin: auto;
+              margin-bottom: 4rem;
+              width: 100%;
+              max-width: 30rem;
+              padding: 0.5rem 1rem;
+              background-color: var(--global-code-bg-color) !important;
+              color: var(--global-text-color);
+              border: none;
+              <!-- border-radius: 0.6rem; -->
+              highlight-color: black;
+              border:1px solid var(--global-divider-color);
+            }
+            .textbox:focus {
+              outline: none !important;
+              box-shadow: none;
+            }
+            .submit {
+              border: 1px solid var(--global-divider-color);
+              // border-radius: 0.6rem;
+              background-color: var(--global-code-bg-color);
+              margin: auto;
+              margin-top: 30px;
+              padding: 0.2rem 0.6rem;
+              color: var(--global-text-color);
+            }
+            .submit:hover{
+              box-shadow: 0px 0px 10px 5px var(--global-code-bg-color);
+            }
+            #message {
+              height: 12rem;
+              resize: none;
+            }
+            .clicked{
+              box-shadow: none;
+            }
+            :-webkit-autofill,
+            :-webkit-autofill:hover,
+            :-webkit-autofill:focus {
+              border: 1px solid var(--global-divider-color);
+              -webkit-text-fill-color: var(--global-text-color);
+              -webkit-box-shadow: none;
+              transition: background-color 5000s ease-in-out 0s;
+              color: var(--global-text-color) !important;
+              highlight-color: var(--global-text-color);
+            }
+            .noselect {
+              -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                 -khtml-user-select: none; /* Konqueror HTML */
+                   -moz-user-select: none; /* Old versions of Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; /* Non-prefixed version, currently
+                                              supported by Chrome, Edge, Opera and Firefox */
+            }
+            .status {
+              width: 100%;
+              height: 100%;
+              background-color: var(--global-bg-color);
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: none;
+              cursor: default;
+            }
+            .status-span {
+              display: block;
+              width: 100%;
+              height: 50%;
+              padding-top: 30%;
+              position: relative;
+              font-size: 2.5rem;
+              font-weight: 400;
+            }
+            .showing {
+              display: block;
+            }
+            .pass {
+              color: var(--green);
+            }
+            .fail {
+              color: var(--red);
+            }
+            #status_button.hidden {
+              display: none;
+            }
+            .invalid {
+              border-color: var(--red);
+            }
+            #message{
+              margin-bottom: 0;
+            }
+            #charlim {
+              display: block;
+              margin: auto;
+              padding: 0;
+              padding-top: 0.5rem;
+              padding-left: 1rem;
+              text-align: left;
+              width: 100%;
+              max-width:35rem;
+              font-size: 0.8rem;
+              color: var(--global-text-color);
+              visibility: visible;
+            }
+            #charlim.hidden {
+              visibility: hidden;
+            }
+            #charlim.char_red{
+              color: var(--red);
+            }
+          </style>
+          <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+          <!-- <form id='form' class="form" action="{{ page.api_link }}" method="get"> -->
+          <!-- <form id='form' class="form" action="{{ page.api_link }}" target="dummyframe" method="get"> -->
+          <div id='form' class="form">
+            <input id="name" class="textbox" type="text" name="name" value="" placeholder="Name" disabled>
+            <input id="email" class="textbox" type="text" name="email" value="" placeholder="Email" disabled>
+            <textarea id="message" class="textbox" type="text" name="message"  placeholder="Message" disabled></textarea>
+            <span id='charlim' class="hidden">Characters remaining: 1024 / 1024</span>
+
+            <input id="submit_button" class="submit" type="submit" value="Send Message" disabled>
+
+            <div id="status" class="status noselect">
+              <span id='status_span' class='status-span'>
+                Sending Message
+              </span>
+              <button id="status_button" class='submit hidden' type="button" name="button">
+                Return to Site
+              </button>
+            </div>
+          </div>
+        </article>
+        <script type="text/javascript" defer>
+          {% include js/contact.js %}
+        </script>
+
+</div>

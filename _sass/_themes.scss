@@ -3,19 +3,36 @@
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
+  // --global-bg-color: #{$white-color};
+  // --global-code-bg-color: #{$code-bg-color-light};
+  // --global-text-color: #{$black-color};
+  // --global-text-color-light: #{$grey-color};
+  // --global-theme-color: #{$red-color-dark};
+  // --global-hover-color: #{$red-color-dark};
+  // --global-footer-bg-color: #{$grey-color-dark};
+  // --global-footer-text-color: #{$grey-color-light};
+  // --global-footer-link-color: #{$white-color};
+  // --global-distill-app-color: #{$grey-color};
+  // --global-divider-color: #{$grey-color-dark};
+  // // --global-divider-color: rgba(0,0,0,.1);
+  // --global-card-bg-color: #{$white-color};
+
+
+  --global-bg-color: #{$grey-color-dark};
+  --global-bg-color: #{$black-color};
+  --global-code-bg-color: #{$code-bg-color-dark};
+  --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$red-color-dark};
-  --global-hover-color: #{$red-color-dark};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
-  --global-distill-app-color: #{$grey-color};
-  --global-divider-color: #{$grey-color-dark};
-  // --global-divider-color: rgba(0,0,0,.1);
-  --global-card-bg-color: #{$white-color};
+  --global-theme-color: #{$red-color};
+  --global-hover-color: #{$red-color};
+  --global-footer-bg-color: #{$grey-color-light};
+  --global-footer-text-color: #{$grey-color-dark};
+  --global-footer-link-color: #{$black-color};
+  --global-distill-app-color: #{$grey-color-light};
+  --global-divider-color: #{$grey-color-light};
+  // --global-divider-color: #424246;
+  --global-card-bg-color: #{$grey-900};
+  --global-card-bg-color: #{$grey-color-dark};
 
   .fa-sun {
     display : none;
@@ -34,11 +51,12 @@
   }
 }
 
-html[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
   --global-bg-color: #{$grey-color-dark};
+  --global-bg-color: #{$black-color};
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color-light};
+  --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$red-color};
   --global-hover-color: #{$red-color};
   --global-footer-bg-color: #{$grey-color-light};
@@ -48,6 +66,45 @@ html[data-theme='dark'] {
   --global-divider-color: #{$grey-color-light};
   // --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
+  --global-card-bg-color: #{$grey-color-dark};
+
+}
+
+@media (prefers-color-scheme: light) {
+  --global-bg-color: #{$grey-color-dark};
+  --global-bg-color: #{$black-color};
+  --global-code-bg-color: #{$code-bg-color-dark};
+  --global-text-color: #{$grey-color-light};
+  --global-text-color-light: #{$grey-color};
+  --global-theme-color: #{$red-color};
+  --global-hover-color: #{$red-color};
+  --global-footer-bg-color: #{$grey-color-light};
+  --global-footer-text-color: #{$grey-color-dark};
+  --global-footer-link-color: #{$black-color};
+  --global-distill-app-color: #{$grey-color-light};
+  --global-divider-color: #{$grey-color-light};
+  // --global-divider-color: #424246;
+  --global-card-bg-color: #{$grey-900};
+  --global-card-bg-color: #{$grey-color-dark};
+
+}
+
+html[data-theme='dark'] {
+  --global-bg-color: #{$grey-color-dark};
+  --global-bg-color: #{$black-color};
+  --global-code-bg-color: #{$code-bg-color-dark};
+  --global-text-color: #{$grey-color-light};
+  --global-text-color-light: #{$grey-color};
+  --global-theme-color: #{$red-color};
+  --global-hover-color: #{$red-color};
+  --global-footer-bg-color: #{$grey-color-light};
+  --global-footer-text-color: #{$grey-color-dark};
+  --global-footer-link-color: #{$black-color};
+  --global-distill-app-color: #{$grey-color-light};
+  --global-divider-color: #{$grey-color-light};
+  // --global-divider-color: #424246;
+  --global-card-bg-color: #{$grey-900};
+  --global-card-bg-color: #{$grey-color-dark};
 
   .fa-sun {
     padding-left: 10px;

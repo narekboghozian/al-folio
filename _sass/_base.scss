@@ -8,9 +8,16 @@ p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
 }
 
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
+
+h3 {
+  margin-top: 3rem;
+}
+
+
 
 table {
   td, th {
@@ -301,11 +308,11 @@ footer.sticky-bottom {
 
 .cv {
   margin-bottom: 40px;
-  
+
   .card {
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
-    
+
     .list-group-item {
       background-color: inherit;
 
@@ -417,13 +424,53 @@ footer.sticky-bottom {
 
 // Projects
 
+.card {
+  border: var(--global-divider-color) 1.5px solid;
+  box-sizing: border-box;
+  border-radius: 0;
+  background-color: var(--global-bg-color);
+}
+
+.card-body {
+  background-color: var(--global-bg-color);
+  padding: 1rem;
+}
+
+.card img {
+  border: var(--global-bg-color) 1rem solid;
+  box-sizing: border-box;
+  border-bottom: 0;
+
+}
+
+.card.hoverable{
+  filter: grayscale(1);
+  // transition: filter 0.15s ease-in-out;
+  transition: filter 0s;
+  transition: transform 0.1s ease-in-out;
+}
+
+.card:hover.hoverable, .card:focus.hoverable{
+  filter: grayscale(0);
+  // transition: filter 0.15s ease-in-out;
+  transition: filter 0s;
+  transform:  scale(1.04);
+  transition: transform 0.1s ease-in-out;
+}
+
+.card figure {
+  margin-bottom: 0;
+}
+
+
 .projects {
   a {
     text-decoration: none;
 
     &:hover {
       .card-title {
-        color: var(--global-theme-color);
+        // color: var(--global-theme-color);
+
       }
     }
   }
@@ -601,7 +648,7 @@ figure.highlight {
 }
 
 pre {
-  color: var(--global-theme-color);
+  color: var(--global-text-color);
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
@@ -610,6 +657,22 @@ pre {
     border-radius: 0;
     padding: 0;
   }
+}
+
+.lineno {
+  border-right: solid 1px var(--global-divider-color);
+  padding-right: 1rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: var(--global-text-color);
+}
+
+.rouge-code {
+  padding-right: 2rem;
+}
+
+.rouge-table {
+  margin-top: 0.8rem;
 }
 
 code {
@@ -663,38 +726,38 @@ progress {
      left: 0;
      top: 56px;
      z-index: 10;
-   
+
      /* Dimensions */
      width: 100%;
      height: 1px;
-   
+
      /* Reset the appearance */
      -webkit-appearance: none;
         -moz-appearance: none;
              appearance: none;
-   
+
      /* Get rid of the default border in Firefox/Opera. */
      border: none;
-   
+
      /* Progress bar container for Firefox/IE10  */
      background-color: transparent;
-   
+
      /* Progress bar value for IE10  */
      color: var(--global-theme-color);
  }
- 
+
  progress::-webkit-progress-bar {
      background-color: transparent;
  }
-   
+
  progress::-webkit-progress-value {
      background-color: var(--global-theme-color);
  }
-   
+
  progress::-moz-progress-bar {
      background-color: var(--global-theme-color);
  }
- 
+
  .progress-container {
      width: 100%;
      background-color: transparent;
@@ -704,7 +767,7 @@ progress {
      height: 5px;
      display: block;
  }
- 
+
  .progress-bar {
      background-color: var(--global-theme-color);
      width: 0%;

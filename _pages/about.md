@@ -1,25 +1,27 @@
 ---
 layout: about
 title: About
-permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+permalink: /about/
+subtitle:
+nav: true
+nav_order: 10
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: about/profile-pic.jpeg
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
-news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false  # includes a list of news items
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Welcome to my site. I built this website to share the [projects](/projects) I work on with friends, family, and others who might be interested. I also post some of my personal [notes](/notes) on technical topics, including some how-to guides. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I'm an engineer living in the San Francisco Bay Area near San Jose. I'm currently taking several gap months after university to build projects, study topics in computer science, and meet other passionate people in STEM.
+
+Feel free to send me a [message](/contact), visit my [GitHub](https://github.com/narekboghozian), or add me on [Linkedin](https://www.linkedin.com/in/narek-boghozian-96135110a)! 
+
+<!-- I am deeply passionate about engineering, science, technology, design, philosophy, culture, economics, and management.  -->
+
+<!-- Although I am taking time off, I am currently open to roles in software engineering and related fields. -->
